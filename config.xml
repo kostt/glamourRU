@@ -4,10 +4,10 @@
     <description>
         Glamour-RU
     </description>
-    <author email="konstantin.alexandrovitch2017@yandex.by" href="https://vk.com/id5267818">
-        Pzz
+    Glamour-RU
     </author>
     <content src="index.html" />
+    <preference name="orientation" value="landscape" />
     <allow-navigation href="*youtube*" />
     <allow-navigation href="*ytimg*" />
     <allow-navigation href="*" />
@@ -74,5 +74,4 @@
         <splash height="960" platform="ios" src="res/screen/ios/Default@2x~iphone.png" width="640" />
         <splash height="480" platform="ios" src="res/screen/ios/Default~iphone.png" width="320" />
     </platform>
-    <plugin name="cordova-plugin-statusbar" spec="^2.4.2" />
 </widget>
