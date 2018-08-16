@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.pzz.app" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Пицца лисицца</name>
+<widget id="com.glamourru.app" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Glamour-RU</name>
     <description>
-        Заказ пиццы в Минске
+        Glamour-RU
     </description>
     <author email="konstantin.alexandrovitch2017@yandex.by" href="https://vk.com/id5267818">
         Pzz
@@ -26,9 +26,6 @@
         <allow-intent href="itms-apps:*" />
         <preference name="BackupWebStorage" value="none" />
     </platform>
-    <preference name="StatusBarBackgroundColor" value="#ff5200" />
-    <preference name="DisallowOverscroll" value="true" />
-    <preference name="StatusBarStyle" value="lightcontent" />
     <platform name="android">
         <icon density="ldpi" src="res/icon/android/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="res/icon/android/drawable-mdpi-icon.png" />
