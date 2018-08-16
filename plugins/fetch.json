@@ -14,5 +14,13 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "im.ltdev.cordova.UserAgent": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/LouisT/cordova-useragent"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

@@ -72,4 +72,5 @@
         <splash height="960" platform="ios" src="res/screen/ios/Default@2x~iphone.png" width="640" />
         <splash height="480" platform="ios" src="res/screen/ios/Default~iphone.png" width="320" />
     </platform>
+    <plugin name="im.ltdev.cordova.UserAgent" spec="https://github.com/LouisT/cordova-useragent" />
 </widget>
