@@ -4,8 +4,6 @@
     <description>
         Glamour-RU
     </description>
-    Glamour-RU
-    </author>
     <content src="index.html" />
     <preference name="orientation" value="landscape" />
     <allow-navigation href="*youtube*" />
