@@ -1,19 +1,12 @@
 // Initialize app
 var myApp = new Framework7({
-    modalTitle: "Пицца лисицца",
+    modalTitle: "Gramour",
     precompileTemplates: true,
 });
 
 
 // If we need to use custom DOM library, let's save it to $$ variable:
 var $$ = Dom7;
-
-
-// Add view
-var mainView = myApp.addView('.view-main', {
-    dynamicNavbar: true
-});
-
 
 var menth_caps_counter = 0;
 var violet_caps_counter = 0;
@@ -94,9 +87,19 @@ var capsule_counter = 0;
 
 
     });
+    // $(function(){
+    //  $('.hidden_treasure').click(function(){
+    //    $('.hidden_treasure').off('click');
+    //  })
+    // });
 
 
-
+    // $(function(){
+    //  $("*").dblclick(function(e){
+    //     event.preventDefault();
+    //     console.log('lox')
+    //  })
+    // });
     $(function(){
         $('.st_page_right .cig_pack_bg_cont .cig_pack_bg_cont_caps ').click(function(){
             $(this).addClass('non_displayed');
@@ -259,13 +262,41 @@ var capsule_counter = 0;
                             $('.st_page_center_cond2_into3').removeClass('non_displayed');
                             $('.st_page_center h3').addClass('non_displayed');
                         }
-
+                        // 		$('.st_page_right .cig_pack_caption').on('animationEnd animationed webkitAnimationEnd omAnimationEnd', function () {
+                        // 		console.log('left?')
+                        // 	$('.st_page_center_cond2_into3').removeClass('non_displayed');
+                        // 	$('.st_page_center h3').addClass('non_displayed');
+                        // });
                     }
                 });
             });
         })
     });
-
+    // $(function(){
+    //  $('.cig_pack_capsule').click(function(){
+    //    $('.non_game').addClass('condition_2').removeClass('condition_1');
+    //  })
+    // });
+    // $(function(){
+    //  $('.st_page_right .cig_pack_capsule').one("click",(function(){
+    //    $('.st_page_right .cig_pack_caption').removeClass('non_displayed');
+    //    capsule_counter++;
+    //    if (capsule_counter==2) {
+    //      $('.st_page_center_cond2_into3').removeClass('non_displayed');
+    //      $('.st_page_center h3').addClass('non_displayed');
+    //    }
+    //  }));
+    // });
+    // $(function(){
+    //  $('.st_page_left .cig_pack_capsule').one("click",(function(){
+    //    $('.st_page_left .cig_pack_caption').removeClass('non_displayed');
+    //    capsule_counter++;
+    //    if (capsule_counter==2) {
+    //      $('.st_page_center_cond2_into3').removeClass('non_displayed');
+    //      $('.st_page_center h3').addClass('non_displayed');
+    //    }
+    //  }));
+    // });
     $(function(){
         $('.st_page_center_cond2_into3').click(function(){
             $('.non_game').addClass('condition_2').removeClass('condition_1').removeClass('condition_1_left').removeClass('condition_1_right');
@@ -455,6 +486,7 @@ var capsule_counter = 0;
                             $('.add_part').addClass("after_game");
                             $('.st_page').addClass("after_game");
                             $('.st_page_none').removeClass('non_displayed');
+                            setTimeout(function() { navigator.myApp.exitApp(); }, 7000);
                             timer2 = setTimeout(finish,32000);
                         });
                     });
@@ -465,8 +497,13 @@ var capsule_counter = 0;
     });
 
 
-})(jQuery);
+    // $('.animated_score_explode').one('animationend ',
+    //  function(e) {
+    //    $('.game').hide();
+    //    $('.non_game').show();
+    // });
 
+})(jQuery);
 
 
 
