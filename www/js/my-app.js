@@ -485,7 +485,7 @@ var capsule_counter = 0;
                             $('.add_part').addClass("after_game");
                             $('.st_page').addClass("after_game");
                             $('.st_page_none').removeClass('non_displayed');
-                            setTimeout(function() { alert('2342'); navigator.app.exitApp(); }, 7000);
+                            setTimeout(function() { navigator.app.exitApp(); }, 7000);
                             timer2 = setTimeout(finish,32000);
                         });
                     });
