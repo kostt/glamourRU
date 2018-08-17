@@ -5,13 +5,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "cordova-plugin-dialogs": "^2.0.1",
     "cordova-plugin-inappbrowser": "^3.0.0",
     "cordova-useragent": "git+https://github.com/LouisT/cordova-useragent.git"
   },
   "cordova": {
     "plugins": {
       "im.ltdev.cordova.UserAgent": {},
-      "cordova-plugin-inappbrowser": {}
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-dialogs": {}
     }
   }
 }
