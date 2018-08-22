@@ -86,220 +86,94 @@ var capsule_counter = 0;
 
 
     });
-    // $(function(){
-    //  $('.hidden_treasure').click(function(){
-    //    $('.hidden_treasure').off('click');
-    //  })
-    // });
 
-
-    // $(function(){
-    //  $("*").dblclick(function(e){
-    //     event.preventDefault();
-    //     console.log('lox')
-    //  })
-    // });
     $(function(){
         $('.st_page_right .cig_pack_bg_cont .cig_pack_bg_cont_caps ').click(function(){
-            $(this).addClass('non_displayed');
-            $('.non_game').addClass('condition_1_right');
+            // $(this).addClass('non_displayed');
+            // $('.non_game').addClass('condition_1_right');
+            $('.st_page_right .cig_pack_bg_cont_caps div').hide();
+            $('.st_page_right .cons_expl_help').show();
+            $('.st_page_right .cig_pack_bg_cont_caps').addClass('cons_expl vis');
         })
     });
     $(function(){
         $('.st_page_left .cig_pack_bg_cont .cig_pack_bg_cont_caps ').click(function(){
-            $(this).addClass('non_displayed');
-            $('.non_game').addClass('condition_1_left');
+            $('.st_page_left .cig_pack_bg_cont_caps div').hide();
+            $('.st_page_left .cons_expl_help').show();
+            $('.st_page_left .cig_pack_bg_cont_caps').addClass('cons_expl vis');
         })
     });
-
 
     var count = true;
 
     $(function(){
-        $('.st_page_right .cig_pack_bg_cont .cig_pack_bg_cont_caps').click(function(){
-            count = false;
-            $('.st_page_right .cig_pack_capsule').removeClass('non_displayed');
-            capsule_counter++;
-            $('.bigMenthol').removeClass('visOne visTwo visThree visFour');
-            $('.st_page_right .menthols').css({'float' : 'none'});
-            $('.menthols .one').addClass('enable');
-            $('.menthols .one').on('animationed webkitAnimationEnd oAnimationEnd', function () {
-                $(this).removeClass('enable');
-                $(this).addClass('vis');
+        $(function(){
+            $('.st_page_right .cig_pack_bg_cont .cig_pack_bg_cont_caps').click(function(){
+                capsule_counter++;
 
-                $('.bigMenthol').addClass('enableOne');
-                $('.bigMenthol').on('animationed webkitAnimationEnd oAnimationEnd', function () {
-                    $(this).removeClass('enableOne');
-                    $('.bigMenthol').removeClass('visTwo visThree visFour');
-                    $(this).addClass('visOne');
+                // $('.st_page_center h1').text(capsule_counter);
+                $('.st_page_right .cig_pack_caption').addClass('enable');
+                // $('.st_page_right .cig_pack_caption').removeClass('enable');
+                // $(this).addClass('vis');
+                $('.st_page_right .cig_pack_caption').on('animationed webkitAnimationEnd oAnimationEnd', function () {
+                    $('.st_page_right .cig_pack_caption').removeClass('enable').addClass('vis');
                 });
-            });
-            $('.menthols .two').addClass('enable');
-            $('.menthols .two').on('animationed webkitAnimationEnd oAnimationEnd', function () {
-                $(this).removeClass('enable');
-                $(this).addClass('vis');
+                if (capsule_counter>=2) {
 
-                $('.bigMenthol').removeClass('visOne');
-                $('.bigMenthol').addClass('enableTwo');
-                $('.bigMenthol').on('animationed webkitAnimationEnd oAnimationEnd', function () {
-                    $(this).removeClass('enableTwo');
-                    $('.bigMenthol').removeClass('visThree visFour');
-                    $(this).addClass('visTwo');
-                });
-            });
-            $('.menthols .three').addClass('enable');
-            $('.menthols .three').on('animationed webkitAnimationEnd oAnimationEnd', function () {
-                $(this).removeClass('enable');
-                $(this).addClass('vis');
+                    timer11 = setTimeout(function(){
 
-                $('.bigMenthol').removeClass('visTwo')
-                $('.bigMenthol').addClass('enableThree');
-                $('.bigMenthol').on('animationed webkitAnimationEnd oAnimationEnd', function () {
-                    $(this).removeClass('enableThree');
-                    $('.bigMenthol').removeClass('visFour');
-                    $(this).addClass('visThree');
-                });
-            });
-            $('.menthols .four').addClass('enable');
-            $('.menthols .four').on('animationed webkitAnimationEnd oAnimationEnd', function () {
-                $(this).removeClass('enable');
-                $(this).addClass('vis');
 
-                $('.bigMenthol').removeClass('visThree');
-                $('.bigMenthol').addClass('enableFour');
-                $('.bigMenthol').on('animationed webkitAnimationEnd oAnimationEnd', function () {
-                    $(this).removeClass('enableFour');
-                    $(this).addClass('visFour');
-                    $('.st_page_right .cig_pack_caption').addClass('enable');
-                    $('.st_page_right .cig_pack_caption').on('animationed webkitAnimationEnd oAnimationEnd', function () {
-                        console.log('rightpart?')
-                        // $(this).removeClass('enable');
-                        $(this).addClass('vis');
-                        $('.menthols .one').removeClass('enable');
-                        $('.menthols .two').removeClass('enable');
-                        $('.menthols .three').removeClass('enable');
-                        $('.menthols .four').removeClass('enable');
 
-                        // console.log(capsule_counter)
-                        if (capsule_counter==2) {
-                            if(count == false){
-                                count == true;
-                                console.log('huh')
-                                $('.st_page_left .cig_pack_caption').on('animationEnd animationed webkitAnimationEnd omAnimationEnd', function () {
-                                    $('.st_page_center_cond2_into3').removeClass('non_displayed');
-                                    $('.st_page_center h3').addClass('non_displayed');
-                                });
-                            }
-                            else{
-                                $('.st_page_center_cond2_into3').removeClass('non_displayed');
-                                $('.st_page_center h3').addClass('non_displayed');
-                            }
-                        }
-                    });
-                });
-            });
-        })
-    });
-    $(function(){
-        $('.st_page_left .cig_pack_bg_cont .cig_pack_bg_cont_caps').click(function(){
-            count = false;
-            capsule_counter++;
-            $('.st_page_left .cig_pack_capsule').removeClass('non_displayed');
-            $('.st_page_left .berries').css({'float' : 'none'});
-            $('.berries .one').addClass('enable');
-            $('.berries .one').on('animationed webkitAnimationEnd oAnimationEnd', function () {
-                $(this).removeClass('enable');
-                $(this).addClass('vis');
-                $('.cig_pack_capsule_grapes').append($('.berries .one'));
-                $('.cig_pack_capsule_grapes .one').addClass('cig_pack_capsule_grapes_one');
-                $('.cig_pack_capsule_grapes').addClass('first');
-            });
-            $('.berries .two').addClass('enable');
-            $('.berries .two').on('animationed webkitAnimationEnd oAnimationEnd', function () {
-                $(this).removeClass('enable');
-                $(this).addClass('vis');
-                $('.cig_pack_capsule_grapes').append($('.berries .two'));
-                $('.cig_pack_capsule_grapes .two').addClass('cig_pack_capsule_grapes_two');
-                $('.cig_pack_capsule_grapes').removeClass('first');
-                $('.cig_pack_capsule_grapes').addClass('second');
-            });
-            $('.berries .three').addClass('enable');
-            $('.berries .three').on('animationed webkitAnimationEnd oAnimationEnd', function () {
-                $(this).removeClass('enable');
-                $(this).addClass('vis');
-                $('.cig_pack_capsule_grapes').append($('.berries .three'));
-                $('.cig_pack_capsule_grapes .three').addClass('cig_pack_capsule_grapes_three');
-                $('.cig_pack_capsule_grapes').removeClass('second');
-                $('.cig_pack_capsule_grapes').addClass('third');
-            });
-            $('.berries .four').addClass('enable');
-            $('.berries .four').on('animationed webkitAnimationEnd oAnimationEnd', function () {
-                $(this).removeClass('enable');
-                $(this).addClass('vis');
-                $('.cig_pack_capsule_grapes').append($('.berries .four'));
-                $('.cig_pack_capsule_grapes .four').addClass('cig_pack_capsule_grapes_four');
-                $('.cig_pack_capsule_grapes').removeClass('third');
-                $('.cig_pack_capsule_grapes').addClass('fourth');
+
+                        $('.st_page_center_cond2_into3').removeClass('non_displayed');
+                        $('.st_page_center h3').addClass('non_displayed');
+                        // $('.cig_pack_bg_cont_taste').addClass('non_displayed');
+
+                    },2500);
+                }
+                //      });
+                //  });
+            })
+        });
+        $(function(){
+            $('.st_page_left .cig_pack_bg_cont .cig_pack_bg_cont_caps').click(function(){
+                capsule_counter++;
+
+
                 $('.st_page_left .cig_pack_caption').addClass('enable');
-                $('.st_page_left .cig_pack_caption').on('animationEnd animationed webkitAnimationEnd omAnimationEnd', function () {
-                    $(this).removeClass('enable');
-                    $(this).addClass('vis');
-                    $('.berries .one').removeClass('enable');
-                    $('.berries .two').removeClass('enable');
-                    $('.berries .three').removeClass('enable');
-                    $('.berries .four').removeClass('enable');
-                    if (capsule_counter==2) {
-                        if(count == false){
-                            count = true;
-                            console.log('heh')
-                            $('.st_page_right .cig_pack_caption').on('animationEnd animationed webkitAnimationEnd omAnimationEnd', function () {
-                                $('.st_page_center_cond2_into3').removeClass('non_displayed');
-                                $('.st_page_center h3').addClass('non_displayed');
-                            });
-                        }
-                        else{
-                            $('.st_page_center_cond2_into3').removeClass('non_displayed');
-                            $('.st_page_center h3').addClass('non_displayed');
-                        }
-                        // 		$('.st_page_right .cig_pack_caption').on('animationEnd animationed webkitAnimationEnd omAnimationEnd', function () {
-                        // 		console.log('left?')
-                        // 	$('.st_page_center_cond2_into3').removeClass('non_displayed');
-                        // 	$('.st_page_center h3').addClass('non_displayed');
-                        // });
-                    }
+
+                // $('.st_page_center h1').text( capsule_counter);
+                // $('.st_page_right .cig_pack_caption').removeClass('enable').addClass('vis');
+                $(this).addClass('vis');
+                $('.st_page_left .cig_pack_caption').on('animationed webkitAnimationEnd oAnimationEnd', function () {
+                    $('.st_page_left .cig_pack_caption').removeClass('enable').addClass('vis');
                 });
-            });
-        })
+
+                if (capsule_counter>=2) {
+                    // $('.st_page_right .cig_pack_caption').on('animationed webkitAnimationEnd oAnimationEnd', function () {
+                    timer22 = setTimeout(function(){
+
+
+
+
+                        $('.st_page_center_cond2_into3').removeClass('non_displayed');
+                        $('.st_page_center h3').addClass('non_displayed');
+                        // $('.cig_pack_bg_cont_taste').addClass('non_displayed');
+
+                    },2500);
+                }
+            })
+        });
     });
-    // $(function(){
-    //  $('.cig_pack_capsule').click(function(){
-    //    $('.non_game').addClass('condition_2').removeClass('condition_1');
-    //  })
-    // });
-    // $(function(){
-    //  $('.st_page_right .cig_pack_capsule').one("click",(function(){
-    //    $('.st_page_right .cig_pack_caption').removeClass('non_displayed');
-    //    capsule_counter++;
-    //    if (capsule_counter==2) {
-    //      $('.st_page_center_cond2_into3').removeClass('non_displayed');
-    //      $('.st_page_center h3').addClass('non_displayed');
-    //    }
-    //  }));
-    // });
-    // $(function(){
-    //  $('.st_page_left .cig_pack_capsule').one("click",(function(){
-    //    $('.st_page_left .cig_pack_caption').removeClass('non_displayed');
-    //    capsule_counter++;
-    //    if (capsule_counter==2) {
-    //      $('.st_page_center_cond2_into3').removeClass('non_displayed');
-    //      $('.st_page_center h3').addClass('non_displayed');
-    //    }
-    //  }));
-    // });
     $(function(){
         $('.st_page_center_cond2_into3').click(function(){
             $('.non_game').addClass('condition_2').removeClass('condition_1').removeClass('condition_1_left').removeClass('condition_1_right');
             $('.berries').addClass('non_displayed')
+            $('.cig_pack_bg_cont_taste').addClass('non_displayed');
+            function Timer123(){
+                $('.cig_pack_bg_cont_taste').removeClass('non_displayed');
+            }
+            timer = setTimeout(Timer123,1);
         })
     });
     $(function(){
@@ -446,6 +320,10 @@ var capsule_counter = 0;
         $('.ball-explode-4').removeClass("ball-explode-4");
         $('.ball-explode-5').removeClass("ball-explode-5");
 
+        $('.cig_pack_bg_cont_caps div').show();
+        $('.cig_pack_bg_cont_caps').removeClass('animated_caps_spin');
+        $('.cons_expl_help').hide();
+
         console.log(timer2);
         arr = [];
         clearTimeout(timer);
@@ -469,26 +347,26 @@ var capsule_counter = 0;
     $(function(){
         $(document).on('animationend oAnimationEnd  webkitAnimationEnd', '.animated_score',
             function(e) {
-                $('.animated_score .balls').eq(0).addClass("ball-explode-1");
-                $('.animated_score .balls').eq(1).addClass("ball-explode-2");
-                $('.animated_score .balls').eq(2).addClass("ball-explode-3");
-                $('.animated_score .balls').eq(3).addClass("ball-explode-4");
-                $('.animated_score .balls').eq(4).addClass("ball-explode-5");
+                // $('.animated_score .balls').eq(0).addClass("ball-explode-1");
+                // $('.animated_score .balls').eq(1).addClass("ball-explode-2");
+                // $('.animated_score .balls').eq(2).addClass("ball-explode-3");
+                // $('.animated_score .balls').eq(3).addClass("ball-explode-4");
+                // $('.animated_score .balls').eq(4).addClass("ball-explode-5");
 
-                $('.ball-explode-5').on('animationend oAnimationEnd  webkitAnimationEnd',
-                    function(e) {
-                        $('.game').fadeOut(1000, function(){
-                            $(this).hide();
+                // $('.ball-explode-5').on('animationend oAnimationEnd  webkitAnimationEnd',
+                // function(e) {
+                $('.game').fadeOut(1000, function(){
+                    $(this).hide();
 
-                            $('.st_page_right .menthols').css({'float' : 'left'});
-                            $('.non_game').addClass("condition_4").removeClass('condition_3');
-                            $('.add_part').addClass("after_game");
-                            $('.st_page').addClass("after_game");
-                            $('.st_page_none').removeClass('non_displayed');
-                            setTimeout(function() { navigator.app.exitApp(); }, 7000);
-                            timer2 = setTimeout(finish,32000);
-                        });
-                    });
+                    $('.st_page_right .menthols').css({'float' : 'left'});
+                    $('.non_game').addClass("condition_4").removeClass('condition_3');
+                    $('.add_part').addClass("after_game");
+                    $('.st_page').addClass("after_game");
+                    $('.st_page_none').removeClass('non_displayed');
+                    setTimeout(function() { navigator.app.exitApp(); }, 7000);
+                    timer2 = setTimeout(finish,32000);
+                });
+                // });
                 // setTimeout(func,3500);
             });
 

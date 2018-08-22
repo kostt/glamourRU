@@ -291,6 +291,7 @@ footer {
 	padding: 37px 30px 105px;
 	line-height: 110px;
 	letter-spacing: 5px;
+	/*font-size: 72px;*/
 }
 
 .st_page_center h1 span {
@@ -1045,7 +1046,7 @@ footer {
 }
 
 .add_part_end h3 {
-	font-size: 62.5px;
+	font-size: 36px;
 	padding-left: 230px;
 	padding-right: 230px;
 	line-height: 70px;
@@ -1389,6 +1390,56 @@ footer {
 	cursor: pointer;
 }
 
+.st_page_right .cons_expl .cons_expl_help{
+    background-image: url(../img/expl.png)!important;
+}
+.cons_expl_help {
+    position: absolute;
+}
+
+.st_page_left .cons_expl .cons_expl_help,
+.st_page_right .cons_expl .cons_expl_help {
+    background-image: url(../img/expl.png)!important;
+   /* width: 250px;
+    height: 250px;*/
+    width: 350px;
+    height: 350px;
+    margin-top: -26px;
+    margin-left: 50px;
+    -webkit-transform-origin: center;
+    -moz-transform-origin: center;
+    -ms-transform-origin: center;
+    -o-transform-origin: center;
+    transform-origin: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-animation: expl .1s ease;
+    -moz-animation: expl .1s ease;
+    -o-animation: expl .1s ease;
+    -ms-animation: expl .1s ease;
+    animation: expla 1s ease;
+    opacity: 0;
+}
+
+.st_page_left .cons_expl .cons_expl_help{
+
+}
+
+@keyframes expla {
+	0% {
+		transform: scale(0, 0);
+	}
+	80% {
+		transform: scale(1, 1);
+		opacity: 1;
+		transform-origin: center;
+	}
+	100%{
+		opacity: 0;
+		transform: scale(.5, .5);
+	}
+}
+
 .game_violet_capsule,
 .game_menthole_capsule {
 	height: 5160px;
@@ -1446,7 +1497,7 @@ footer {
 	bottom: 51%;
 }
 .game_violet_capsule div {
-	background-image: url(../img/violet_capsule.png);
+	background-image: url(../img/menthol_capsule.png);
 }
 
 .game_menthole_capsule div {
@@ -1678,7 +1729,7 @@ footer {
 
 .v_balls,
 .m_balls {
-	background-image: url(../img/violet_capsule.png);
+	background-image: url(../img/menthol_capsule.png);
 	display: block;
 	-webkit-animation: fadein 1.2s ease-out;
 	-moz-animation: fadein 1.2s ease-out;
