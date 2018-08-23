@@ -5,6 +5,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "cordova-plugin-crosswalk-webview": "^2.4.0",
     "cordova-plugin-dialogs": "^2.0.1",
     "cordova-plugin-inappbrowser": "^3.0.0",
     "cordova-useragent": "git+https://github.com/LouisT/cordova-useragent.git"
@@ -13,7 +14,8 @@
     "plugins": {
       "im.ltdev.cordova.UserAgent": {},
       "cordova-plugin-inappbrowser": {},
-      "cordova-plugin-dialogs": {}
+      "cordova-plugin-dialogs": {},
+      "cordova-plugin-crosswalk-webview": {}
     }
   }
 }
